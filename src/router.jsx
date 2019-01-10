@@ -23,13 +23,16 @@ import Icon403 from '@material-ui/icons/NotificationImportant';
 import { Grade as GradeIcon  } from '@material-ui/icons';
 
 import { BasicLayout } from './layouts';
-import { Home, BasicForm, QueryList, StandardList, CardList } from './routes';
+import { 
+  Home, BasicForm, QueryList, StandardList, CardList,
+  Analysis
+} from './routes';
 
 const ROUTES = [
   {
     path: '/dashboard', name: '总览页', layout: BasicLayout, icon: DashBoardIcon,
     children: [
-      { path: '/analysis', name: '分析页', layout: BasicLayout, icon: AnalysisIcon, component: Home },
+      { path: '/analysis', name: '分析页', layout: BasicLayout, icon: AnalysisIcon, component: Analysis },
       { path: '/monitor', name: '监控页', layout: BasicLayout, icon: MonitorIcon, component: Home },
       { path: '/workplace', name: '工作台', layout: BasicLayout, icon: WorkplaceIcon, component: Home }
     ]
